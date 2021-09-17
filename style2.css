@@ -1,0 +1,68 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.vert {
+    background-color: rgba(16, 145, 16, 0.4);
+}
+
+.bleu {
+    background-color: rgb(53, 53, 177, 0.4);
+}
+
+#menu {
+    list-style-type: none; /* pour retirer les puces */
+    margin: 0;
+    padding: 0;
+    background-color: rgb(211, 211, 211, 0.28);
+    text-align: center; /* pour centrer le menu */
+}
+
+#menu li {
+    display: inline-block; /* pour mettre les <li> sur la même ligne tout en leur donnant des dimensions */
+    position: relative; /* pour pouvoir positionner le menu déroulant en absolu par rapport au <li> */
+}
+
+#menu li a {
+    color: #2d2d2d;
+    font-weight: bold; /* graisse de la typo : gras */
+    text-transform: uppercase; /* pour mettre le texte en, majuscules */
+    display: block; /* pour pouvoir mettre des marges intérieures à la balise <a> */
+    padding: 5px 20px; /* marges intérieures de 5px en haut et en bas, et de 20px à gauche et à droite */ 
+    transition: 0.2s ease; /* pour rajouter "une petite touche de magie" au changement d'état */
+}
+
+#menu li a:hover {
+    background-color: #bd1f26;
+    color: #fff;
+}
+
+#menu li ul {
+    display: none; /* pour cacher par défaut le menu déroulant */
+    list-style-type: none; 
+    background-color: #dedede;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 26px; 
+    left: 0;
+    width: 100%; /* pour avoir la même largeur que la balise parent */
+}
+
+#menu li:hover ul {
+    display: block; /* pour afficher le menu déroulant au survol du <li> parent */
+}
+
+#menu li ul li {
+    display: list-item;
+    border-bottom: 1px solid #fff;      
+}
